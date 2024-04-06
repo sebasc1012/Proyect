@@ -57,6 +57,7 @@ const MainHeader = styled.div`
   align-items: baseline;
   gap: 48px;
   height: 72px;
+  overflow:auto;
 
   @media ${QUIRES.TabletSmall} {
     display: flex;
@@ -74,6 +75,7 @@ const NavDestop = styled.nav`
   flex: 1;
   margin: 0 48px;
   gap: 50px;
+  
 
   @media ${QUIRES.LaptopSmall} {
     display: none;
