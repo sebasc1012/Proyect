@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
-import { QUIRES, COLORS, WEIGHTS } from '../../constants';
+import {   WEIGHTS } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -47,7 +47,7 @@ right:0;
 left:0;
 top:0;
 bottom:0
-background:hsl(220deg, 5% 40% / 0.8);
+background: var(--color-backdrop);
 `
 const Content= styled(DialogContent)`
 background:white;
@@ -65,14 +65,14 @@ gap:15px;
 `
 
 const NavLink=styled.a`
-color:${COLORS.gray[900]};
+color:var(--color-gray-900);
 font-weight:${WEIGHTS.medium};
 text-decoration:none;
 font-size:1.25rem;
 text-trasform:uppercase
 
 &:first-of-type{
-  color:${COLORS.secondary}
+  color:var(--color-secondary);
 }
 `
 
@@ -84,7 +84,7 @@ justify-content:flex-end;
 `
 
 const LinkSmall=styled.a`
-color:${COLORS.gray[700]}
+color:var(--color-gray-700);
 gap:14px;
 text-decoration:none
 font-size:0.75rem;

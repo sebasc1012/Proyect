@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { QUIRES } from "../../constants";
 import Icon from "../Icon";
-import { COLORS, WEIGHTS } from '../../constants';
+import {  WEIGHTS } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -52,17 +52,17 @@ const Header = () => {
 
 const MainHeader = styled.div`
   padding: 20px 32px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   display: flex;
   align-items: baseline;
   gap: 48px;
-  height: 72px;
+
   overflow:auto;
 
   @media ${QUIRES.TabletSmall} {
     display: flex;
     justify-content: space-between;
-    border-top: solid 4px ${COLORS.gray[900]};
+    border-top: solid 4px var(--color-gray-900);
   }
 
   @media ${QUIRES.PhoneSmall} {
@@ -74,7 +74,7 @@ const NavDestop = styled.nav`
   display: flex;
   flex: 1;
   margin: 0 48px;
-  gap: 50px;
+  gap:clamp(1rem, 9.2vw + 4.5rem, 3.5rem);
   
 
   @media ${QUIRES.LaptopSmall} {
@@ -104,7 +104,7 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
